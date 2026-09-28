@@ -1,41 +1,89 @@
-# Quantum-Inspired Cyber Threat Detection for Digital Signature Security
+]# Quantum-Inspired Cyber Threat Detection for Digital Signature Security
+
+A hybrid cybersecurity framework for detecting suspicious activities and cyber threats associated with digital signature verification using statistical anomaly detection, machine learning, quantum-inspired feature analysis, adaptive thresholding, and automated security alerts.
+
+---
 
 ## Overview
 
-This project presents a hybrid cybersecurity framework for detecting suspicious activities and cyber threats associated with digital signature verification.
+Traditional digital signature systems primarily determine whether a signature is valid or invalid. However, abnormal verification behavior can provide additional indicators of potential cyber attacks.
 
-The system combines statistical anomaly detection, machine learning, quantum-inspired feature analysis, adaptive thresholding, and automated security alerts into a unified detection pipeline.
+This project proposes a hybrid threat-detection framework that analyzes security events associated with digital signature operations. The system extracts behavioral and signature-related features and processes them through multiple detection techniques.
 
-A Streamlit dashboard is provided for interactive analysis and visualization.
+The framework combines:
+
+- Statistical anomaly detection
+- Machine learning-based anomaly detection
+- Quantum-inspired feature analysis
+- Hybrid threat scoring
+- Adaptive thresholding
+- Automated security alerts
+- Interactive Streamlit visualization
+
+The project is implemented as an academic cybersecurity research prototype.
+
+---
 
 ## Problem Statement
 
-Traditional digital signature verification primarily determines whether a signature is valid or invalid. However, repeated verification failures, replay behavior, unusual request bursts, and other abnormal patterns can indicate potential cyber attacks.
+Digital signature verification provides integrity and authenticity, but a simple valid/invalid verification result may not capture suspicious behavioral patterns.
 
-This project analyzes security-event behavior around digital signature operations to identify suspicious activities and generate security alerts.
+Attackers may generate behaviors such as:
+
+- Repeated verification failures
+- Replay attempts
+- Unusual verification frequencies
+- Burst verification activity
+- Message or signature anomalies
+- Tampering-related behavior
+
+The objective of this project is to analyze such security-event behavior and identify potentially suspicious activity using a combination of statistical, machine-learning, and quantum-inspired detection techniques.
+
+---
+
+## Objectives
+
+The major objectives of the project are:
+
+1. Generate and analyze digital-signature security events.
+2. Extract behavioral and signature-related security features.
+3. Detect anomalies using statistical analysis.
+4. Detect anomalous behavior using machine learning.
+5. Develop a quantum-inspired feature representation.
+6. Combine multiple detector outputs into a hybrid threat score.
+7. Apply adaptive thresholding for threat classification.
+8. Generate automated security alerts.
+9. Evaluate detector performance using standard classification metrics.
+10. Provide an interactive dashboard for security analysis.
+
+---
 
 ## Key Features
 
-- Digital signature generation and verification using ECDSA
+- ECDSA digital signature generation and verification
 - SHA-256 message digest generation
-- Security-event generation and analysis
-- Feature engineering with 14 detection features
+- Security-event generation
+- Security feature engineering
 - Statistical anomaly detection
-- Isolation Forest machine-learning detection
+- Isolation Forest anomaly detection
 - Quantum-inspired feature representation
 - Qiskit-based quantum circuit simulation
 - Hybrid threat scoring
 - Adaptive thresholding
 - Automated security alerts
 - Attack-wise detection analysis
+- Confusion-matrix analysis
+- Performance evaluation
 - Interactive Streamlit dashboard
-- Evaluation metrics and visualizations
+- Visualization of detection results
 
-## Attack Scenarios
+---
 
-The experimental dataset contains:
+## Experimental Dataset
 
-| Event Type | Number |
+The current experimental dataset contains **180 security events**.
+
+| Event Type | Number of Events |
 |---|---:|
 | Normal | 100 |
 | Tampering | 30 |
@@ -43,51 +91,77 @@ The experimental dataset contains:
 | Verification Burst | 20 |
 | **Total** | **180** |
 
-## Detection Framework
+The dataset is generated for experimental and academic evaluation.
 
-The system extracts behavioral and signature-related features from security events.
+### Attack Scenarios
 
-The 14 features are:
+#### 1. Tampering
 
-1. message_size
-2. signature_size
-3. message_entropy
-4. verification_failure
-5. replay_intensity
-6. signature_message_ratio
-7. frequency_score
-8. digest_entropy
-9. verification_attempt_rate
-10. burst_indicator
-11. replay_indicator
-12. signature_validity_signal
-13. verification_failure_rate
-14. message_size_deviation
+Represents situations where the original signed message is modified and signature verification behavior changes.
 
-The detection pipeline consists of:
+#### 2. Replay
+
+Represents repeated use or repeated verification of previously observed signed messages.
+
+#### 3. Verification Burst
+
+Represents unusually high-frequency verification activity within a short period.
+
+---
+
+## System Architecture
 
 ```text
-Security Events
-       |
-       v
-Feature Engineering
-       |
-       +------------------+
-       |                  |
-       v                  v
-Statistical Detector   ML Detector
-       |                  |
-       +--------+---------+
-                |
-                v
-      Quantum-Inspired
-       Feature Analysis
-                |
-                v
-         Hybrid Scoring
-                |
-                v
-       Adaptive Threshold
-                |
-                v
-       Security Alert
+                 Security Events
+                        |
+                        v
+              Digital Signature Layer
+                        |
+                        v
+               Feature Engineering
+                        |
+        +---------------+---------------+
+        |               |               |
+        v               v               v
+ Statistical       ML Detector    Quantum-Inspired
+  Detector        Isolation Forest   Representation
+        |               |               |
+        +---------------+---------------+
+                        |
+                        v
+                 Hybrid Threat Score
+                        |
+                        v
+                Adaptive Threshold
+                        |
+                        v
+                Security Alert Engine
+                        |
+                        v
+                 Streamlit Dashboard
+
+### Dashboard Screenshots
+
+#### Overview
+
+![Dashboard Overview](screenshots/overview.png)
+
+#### Event Analysis
+
+![Event Analysis](screenshots/event-analysis.png)
+
+#### Detector Evaluation
+
+![Detector Evaluation](screenshots/evaluation.png)
+
+#### Attack Analysis
+
+![Attack Analysis](screenshots/attack-analysis.png)
+
+#### Quantum-Inspired Analysis
+
+![Quantum-Inspired Analysis](screenshots/quantum-analysis.png)
+
+#### Security Alerts
+
+![Security Alerts](screenshots/security-alerts.png)
