@@ -1,4 +1,4 @@
-]# Quantum-Inspired Cyber Threat Detection for Digital Signature Security
+# Quantum-Inspired Cyber Threat Detection for Digital Signature Security
 
 A hybrid cybersecurity framework for detecting suspicious activities and cyber threats associated with digital signature verification using statistical anomaly detection, machine learning, quantum-inspired feature analysis, adaptive thresholding, and automated security alerts.
 
@@ -109,6 +109,27 @@ Represents unusually high-frequency verification activity within a short period.
 
 ---
 
+## Detection Features
+
+The system extracts 14 features from security events:
+
+1. `message_size`
+2. `signature_size`
+3. `message_entropy`
+4. `verification_failure`
+5. `replay_intensity`
+6. `signature_message_ratio`
+7. `frequency_score`
+8. `digest_entropy`
+9. `verification_attempt_rate`
+10. `burst_indicator`
+11. `replay_indicator`
+12. `signature_validity_signal`
+13. `verification_failure_rate`
+14. `message_size_deviation`
+
+---
+
 ## System Architecture
 
 ```text
@@ -139,29 +160,3 @@ Represents unusually high-frequency verification activity within a short period.
                         |
                         v
                  Streamlit Dashboard
-
-### Dashboard Screenshots
-
-#### Overview
-
-![Dashboard Overview](screenshots/overview.png)
-
-#### Event Analysis
-
-![Event Analysis](screenshots/event-analysis.png)
-
-#### Detector Evaluation
-
-![Detector Evaluation](screenshots/evaluation.png)
-
-#### Attack Analysis
-
-![Attack Analysis](screenshots/attack-analysis.png)
-
-#### Quantum-Inspired Analysis
-
-![Quantum-Inspired Analysis](screenshots/quantum-analysis.png)
-
-#### Security Alerts
-
-![Security Alerts](screenshots/security-alerts.png)
