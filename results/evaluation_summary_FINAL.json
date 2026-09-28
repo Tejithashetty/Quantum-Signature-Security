@@ -1,0 +1,32 @@
+{
+    "dataset_size": 180,
+    "training_size": 70,
+    "test_size": 110,
+    "feature_count": 14,
+    "feature_columns": [
+        "message_size",
+        "signature_size",
+        "message_entropy",
+        "verification_failure",
+        "replay_intensity",
+        "signature_message_ratio",
+        "frequency_score",
+        "digest_entropy",
+        "verification_attempt_rate",
+        "burst_indicator",
+        "replay_indicator",
+        "signature_validity_signal",
+        "verification_failure_rate",
+        "message_size_deviation"
+    ],
+    "feature_statistics": {
+        "burst_threshold": 0.14285714285714285,
+        "normal_message_size": 28.0
+    },
+    "thresholds": {
+        "Statistical": 0.24141730903117561,
+        "ML": 0.9520132040628265,
+        "Quantum-Inspired": 0.8531898138938219,
+        "Hybrid": 0.6759721786871568
+    }
+}
